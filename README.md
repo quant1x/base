@@ -8,7 +8,7 @@
 
 ## 📖 项目简介
 
-**quant1x-std** 是一个专为量化交易和高性能计算设计的多语言标准库。该项目提供了一套经过生产验证的高性能工具集，涵盖内存管理、时间处理、数值计算、字符串操作等核心功能。
+**quant1x-base** 是一个专为量化交易和高性能计算设计的多语言标准库。该项目提供了一套经过生产验证的高性能工具集，涵盖内存管理、时间处理、数值计算、字符串操作等核心功能。
 
 ### 🎯 设计目标
 
@@ -56,8 +56,8 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://gitee.com/quant1x/std.git
-cd std
+git clone https://gitee.com/quant1x/base.git
+cd base
 ```
 
 ### 2. 配置环境变量
@@ -150,7 +150,7 @@ api::simd_add(a.data(), b.data(), result.data(), 4);
 ## 🏗️ 项目结构
 
 ```
-quant1x-std/
+quant1x-base/
 ├── src/                    # C++ 源代码
 │   ├── affinity.h/cpp     # NUMA 亲和性管理
 │   ├── buffer.h           # 二进制流处理
@@ -253,8 +253,8 @@ go test -bench=. -benchmem ./...
 
 ## 🔗 相关链接
 
-- **项目主页**: [Gitee - quant1x/std](https://gitee.com/quant1x/std)
-- **问题反馈**: [Issues](https://gitee.com/quant1x/std/issues)
+- **项目主页**: [Gitee - quant1x/base](https://gitee.com/quant1x/base)
+- **问题反馈**: [Issues](https://gitee.com/quant1x/base/issues)
 - **技术文档**: [docs/](docs/)
 - **NUMA 亲和性**: [docs/numa_affinity.md](docs/numa_affinity.md)
 
@@ -269,4 +269,4 @@ go test -bench=. -benchmem ./...
 
 ---
 
-*quant1x-std 项目致力于为量化交易提供高性能、可靠的基础设施。*
+*quant1x-base 项目致力于为量化交易提供高性能、可靠的基础设施。*
