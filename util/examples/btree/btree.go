@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/quant1x/std/util/btree"
+	"gitee.com/quant1x/base/util/btree"
 )
 
 // BTreeExample to demonstrate basic usage of BTree

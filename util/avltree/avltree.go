@@ -12,7 +12,7 @@ package avltree
 import (
 	"fmt"
 
-	"gitee.com/quant1x/std/util/internal"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 func assertTreeImplementation() {

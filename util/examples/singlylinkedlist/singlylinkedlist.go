@@ -5,8 +5,8 @@
 package main
 
 import (
-	"gitee.com/quant1x/std/util/internal"
-	sll "gitee.com/quant1x/std/util/singlylinkedlist"
+	"gitee.com/quant1x/base/util/internal"
+	sll "gitee.com/quant1x/base/util/singlylinkedlist"
 )
 
 // SinglyLinkedListExample to demonstrate basic usage of SinglyLinkedList

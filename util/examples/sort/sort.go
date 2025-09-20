@@ -5,7 +5,7 @@
 package main
 
 import (
-	"gitee.com/quant1x/std/util/internal"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 // SortExample to demonstrate basic usage of basic sort

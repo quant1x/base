@@ -406,6 +406,25 @@ message(STATUS "third_libs     Libs: ${_libs}")
 message(STATUS "third_libs  Defines: ${_defines}")
 message(STATUS "third_libs  Options: ${_options}")
 
+# =============================
+# quant1x-std 基础依赖接口
+# =============================
+add_library(quant1x-base INTERFACE)
+target_link_libraries(quant1x-base INTERFACE third_libs xtensor_optimize global_compile_options)
+
+# =============================
+# quant1x-std 下所有子模块
+# =============================
+
+# 添加 API 子项目
+add_subdirectory(api)
+
+
+# =============================
+# quant1x-std 主配置
+# =============================
+
+# 添加标准库
 add_library(quant1x-std STATIC
     ${std-headers}
     ${std-sources}
@@ -419,7 +438,7 @@ target_include_directories(quant1x-std
 )
 
 target_link_libraries(quant1x-std PUBLIC
-    third_libs global_compile_options
+    quant1x-api
 )
 
 # 添加别名目标，允许下游用户使用 quant1x::std
@@ -496,7 +515,6 @@ message(STATUS "  BS::thread_pool(bshoshany-thread-pool) : v${BSHOSHANY_THREAD_P
 message(STATUS "                                 croncpp : v${croncpp_VERSION}")
 message(STATUS "            tsl::robin_map(robin-map)(√) : v${tsl-robin-map_VERSION}")
 message(STATUS "                                argparse : v${argparse_VERSION}")
-#message(STATUS "                               RapidJSON : v${RapidJSON_VERSION}")
 message(STATUS "                                yaml-cpp : v${yaml-cpp_VERSION}")
 message(STATUS "                                Protobuf : v${Protobuf_VERSION}")
 message(STATUS "                             Cap'n Proto : v${CapnProto_VERSION}")
@@ -599,7 +617,15 @@ install(
 )
 
 # 安装配置（可选）
-install(TARGETS quant1x-std third_libs xtensor_optimize global_compile_options EXPORT quant1x-std
+install(TARGETS
+    # 导出目标
+    quant1x-base quant1x-api quant1x-std
+    third_libs xtensor_optimize global_compile_options
+
+    # 导出集
+    EXPORT quant1x-std
+
+    # 安装路径
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin

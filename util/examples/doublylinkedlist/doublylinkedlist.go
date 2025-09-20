@@ -5,8 +5,8 @@
 package main
 
 import (
-	dll "gitee.com/quant1x/std/util/doublylinkedlist"
-	"gitee.com/quant1x/std/util/internal"
+	dll "gitee.com/quant1x/base/util/doublylinkedlist"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 // DoublyLinkedListExample to demonstrate basic usage of DoublyLinkedList

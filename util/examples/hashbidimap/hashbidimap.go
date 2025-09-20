@@ -4,7 +4,7 @@
 
 package main
 
-import "gitee.com/quant1x/std/util/hashbidimap"
+import "gitee.com/quant1x/base/util/hashbidimap"
 
 // HashBidiMapExample to demonstrate basic usage of HashMap
 func main() {

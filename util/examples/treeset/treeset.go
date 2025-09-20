@@ -4,7 +4,7 @@
 
 package main
 
-import "gitee.com/quant1x/std/util/treeset"
+import "gitee.com/quant1x/base/util/treeset"
 
 // TreeSetExample to demonstrate basic usage of TreeSet
 func main() {

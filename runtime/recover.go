@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime/debug"
 
-	"gitee.com/quant1x/std/logger"
+	"gitee.com/quant1x/base/logger"
 )
 
 // Deprecated: 废弃 [wangfeng on 2024/2/27 07:52]

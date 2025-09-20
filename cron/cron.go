@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"gitee.com/quant1x/std/logger"
-	"gitee.com/quant1x/std/runtime"
+	"gitee.com/quant1x/base/logger"
+	"gitee.com/quant1x/base/runtime"
 )
 
 // Cron keeps track of any number of entries, invoking the associated func as

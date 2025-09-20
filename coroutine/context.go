@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"gitee.com/quant1x/std/core"
-	"gitee.com/quant1x/std/logger"
+	"gitee.com/quant1x/base/core"
+	"gitee.com/quant1x/base/logger"
 )
 
 var (

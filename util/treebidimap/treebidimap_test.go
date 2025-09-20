@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"gitee.com/quant1x/std/util/internal"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 func TestMapPut(t *testing.T) {

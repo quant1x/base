@@ -5,8 +5,8 @@
 package main
 
 import (
-	"gitee.com/quant1x/std/util/arraylist"
-	"gitee.com/quant1x/std/util/internal"
+	"gitee.com/quant1x/base/util/arraylist"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 // ArrayListExample to demonstrate basic usage of ArrayList

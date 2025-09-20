@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/quant1x/std/api"
+	"gitee.com/quant1x/base/api"
 )
 
 func main() {

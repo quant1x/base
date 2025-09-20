@@ -4,7 +4,7 @@
 
 package main
 
-import lls "gitee.com/quant1x/std/util/linkedliststack"
+import lls "gitee.com/quant1x/base/util/linkedliststack"
 
 // LinkedListStackExample to demonstrate basic usage of LinkedListStack
 func main() {

@@ -5,8 +5,8 @@
 package main
 
 import (
-	"gitee.com/quant1x/std/util/internal"
-	"gitee.com/quant1x/std/util/treebidimap"
+	"gitee.com/quant1x/base/util/internal"
+	"gitee.com/quant1x/base/util/treebidimap"
 )
 
 // TreeBidiMapExample to demonstrate basic usage of TreeBidiMap

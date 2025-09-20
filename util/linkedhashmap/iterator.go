@@ -5,8 +5,8 @@
 package linkedhashmap
 
 import (
-	"gitee.com/quant1x/std/util/doublylinkedlist"
-	"gitee.com/quant1x/std/util/internal"
+	"gitee.com/quant1x/base/util/doublylinkedlist"
+	"gitee.com/quant1x/base/util/internal"
 )
 
 func assertIteratorImplementation() {

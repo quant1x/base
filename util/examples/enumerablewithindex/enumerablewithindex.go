@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/quant1x/std/util/treeset"
+	"gitee.com/quant1x/base/util/treeset"
 )
 
 func printSet(txt string, set *treeset.Set) {

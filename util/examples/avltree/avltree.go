@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	avl "gitee.com/quant1x/std/util/avltree"
+	avl "gitee.com/quant1x/base/util/avltree"
 )
 
 // AVLTreeExample to demonstrate basic usage of AVLTree

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"gitee.com/quant1x/std/concurrent"
+	"gitee.com/quant1x/base/concurrent"
 )
 
 var (
