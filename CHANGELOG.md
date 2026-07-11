@@ -3,10 +3,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.31] - 2026-07-11
+### Changed
+- 调整python发布构建流程
+
 ## [0.0.30] - 2026-07-11
 ### Changed
 - 修订许可证为MIT
 - 规划python库配置
+- release v0.0.30
 
 ## [0.0.29] - 2026-07-11
 ### Changed
@@ -179,7 +184,8 @@ All notable changes to this project will be documented in this file.
 - update changelog
 
 
-[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.30...HEAD
+[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.31...HEAD
+[0.0.31]: https://gitee.com/quant1x/base.git/compare/v0.0.30...v0.0.31
 [0.0.30]: https://gitee.com/quant1x/base.git/compare/v0.0.29...v0.0.30
 [0.0.29]: https://gitee.com/quant1x/base.git/compare/v0.0.28...v0.0.29
 [0.0.28]: https://gitee.com/quant1x/base.git/compare/v0.0.27...v0.0.28
