@@ -3,9 +3,19 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.29] - 2026-07-11
+### Changed
+- 清理protobuf的cmake缓存
+- 调整go代码包路径
+- 新增c++模块子目录
+- 修订项目名称
+- 暂存现有代码
+- 保存代码
+
 ## [0.0.28] - 2025-09-20
 ### Changed
 - 补充simd流程注释
+- update changelog
 
 ## [0.0.27] - 2025-09-20
 ### Changed
@@ -163,33 +173,34 @@ All notable changes to this project will be documented in this file.
 - update changelog
 
 
-[Unreleased]: https://gitee.com/quant1x/std.git/compare/v0.0.28...HEAD
-[0.0.28]: https://gitee.com/quant1x/std.git/compare/v0.0.27...v0.0.28
-[0.0.27]: https://gitee.com/quant1x/std.git/compare/v0.0.26...v0.0.27
-[0.0.26]: https://gitee.com/quant1x/std.git/compare/v0.0.25...v0.0.26
-[0.0.25]: https://gitee.com/quant1x/std.git/compare/v0.0.24...v0.0.25
-[0.0.24]: https://gitee.com/quant1x/std.git/compare/v0.0.23...v0.0.24
-[0.0.23]: https://gitee.com/quant1x/std.git/compare/v0.0.22...v0.0.23
-[0.0.22]: https://gitee.com/quant1x/std.git/compare/v0.0.21...v0.0.22
-[0.0.21]: https://gitee.com/quant1x/std.git/compare/v0.0.20...v0.0.21
-[0.0.20]: https://gitee.com/quant1x/std.git/compare/v0.0.19...v0.0.20
-[0.0.19]: https://gitee.com/quant1x/std.git/compare/v0.0.18...v0.0.19
-[0.0.18]: https://gitee.com/quant1x/std.git/compare/v0.0.17...v0.0.18
-[0.0.17]: https://gitee.com/quant1x/std.git/compare/v0.0.16...v0.0.17
-[0.0.16]: https://gitee.com/quant1x/std.git/compare/v0.0.15...v0.0.16
-[0.0.15]: https://gitee.com/quant1x/std.git/compare/v0.0.14...v0.0.15
-[0.0.14]: https://gitee.com/quant1x/std.git/compare/v0.0.13...v0.0.14
-[0.0.13]: https://gitee.com/quant1x/std.git/compare/v0.0.12...v0.0.13
-[0.0.12]: https://gitee.com/quant1x/std.git/compare/v0.0.11...v0.0.12
-[0.0.11]: https://gitee.com/quant1x/std.git/compare/v0.0.10...v0.0.11
-[0.0.10]: https://gitee.com/quant1x/std.git/compare/v0.0.9...v0.0.10
-[0.0.9]: https://gitee.com/quant1x/std.git/compare/v0.0.8...v0.0.9
-[0.0.8]: https://gitee.com/quant1x/std.git/compare/v0.0.7...v0.0.8
-[0.0.7]: https://gitee.com/quant1x/std.git/compare/v0.0.6...v0.0.7
-[0.0.6]: https://gitee.com/quant1x/std.git/compare/v0.0.5...v0.0.6
-[0.0.5]: https://gitee.com/quant1x/std.git/compare/v0.0.4...v0.0.5
-[0.0.4]: https://gitee.com/quant1x/std.git/compare/v0.0.3...v0.0.4
-[0.0.3]: https://gitee.com/quant1x/std.git/compare/v0.0.2...v0.0.3
-[0.0.2]: https://gitee.com/quant1x/std.git/compare/v0.0.1...v0.0.2
+[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.29...HEAD
+[0.0.29]: https://gitee.com/quant1x/base.git/compare/v0.0.28...v0.0.29
+[0.0.28]: https://gitee.com/quant1x/base.git/compare/v0.0.27...v0.0.28
+[0.0.27]: https://gitee.com/quant1x/base.git/compare/v0.0.26...v0.0.27
+[0.0.26]: https://gitee.com/quant1x/base.git/compare/v0.0.25...v0.0.26
+[0.0.25]: https://gitee.com/quant1x/base.git/compare/v0.0.24...v0.0.25
+[0.0.24]: https://gitee.com/quant1x/base.git/compare/v0.0.23...v0.0.24
+[0.0.23]: https://gitee.com/quant1x/base.git/compare/v0.0.22...v0.0.23
+[0.0.22]: https://gitee.com/quant1x/base.git/compare/v0.0.21...v0.0.22
+[0.0.21]: https://gitee.com/quant1x/base.git/compare/v0.0.20...v0.0.21
+[0.0.20]: https://gitee.com/quant1x/base.git/compare/v0.0.19...v0.0.20
+[0.0.19]: https://gitee.com/quant1x/base.git/compare/v0.0.18...v0.0.19
+[0.0.18]: https://gitee.com/quant1x/base.git/compare/v0.0.17...v0.0.18
+[0.0.17]: https://gitee.com/quant1x/base.git/compare/v0.0.16...v0.0.17
+[0.0.16]: https://gitee.com/quant1x/base.git/compare/v0.0.15...v0.0.16
+[0.0.15]: https://gitee.com/quant1x/base.git/compare/v0.0.14...v0.0.15
+[0.0.14]: https://gitee.com/quant1x/base.git/compare/v0.0.13...v0.0.14
+[0.0.13]: https://gitee.com/quant1x/base.git/compare/v0.0.12...v0.0.13
+[0.0.12]: https://gitee.com/quant1x/base.git/compare/v0.0.11...v0.0.12
+[0.0.11]: https://gitee.com/quant1x/base.git/compare/v0.0.10...v0.0.11
+[0.0.10]: https://gitee.com/quant1x/base.git/compare/v0.0.9...v0.0.10
+[0.0.9]: https://gitee.com/quant1x/base.git/compare/v0.0.8...v0.0.9
+[0.0.8]: https://gitee.com/quant1x/base.git/compare/v0.0.7...v0.0.8
+[0.0.7]: https://gitee.com/quant1x/base.git/compare/v0.0.6...v0.0.7
+[0.0.6]: https://gitee.com/quant1x/base.git/compare/v0.0.5...v0.0.6
+[0.0.5]: https://gitee.com/quant1x/base.git/compare/v0.0.4...v0.0.5
+[0.0.4]: https://gitee.com/quant1x/base.git/compare/v0.0.3...v0.0.4
+[0.0.3]: https://gitee.com/quant1x/base.git/compare/v0.0.2...v0.0.3
+[0.0.2]: https://gitee.com/quant1x/base.git/compare/v0.0.1...v0.0.2
 
-[0.0.1]: https://gitee.com/quant1x/std.git/releases/tag/v0.0.1
+[0.0.1]: https://gitee.com/quant1x/base.git/releases/tag/v0.0.1
