@@ -1,0 +1,30 @@
+include README.md
+include LICENSE
+include pyproject.toml
+
+recursive-include base *.py *.pyi
+
+prune .git
+prune .github
+prune .idea
+prune .vscode
+prune api
+prune cache
+prune cmake
+prune cmake-build-debug
+prune concurrent
+prune core
+prune coroutine
+prune cron
+prune docs
+prune examples
+prune logger
+prune runtime
+prune src
+prune target
+prune tests
+prune third_party
+prune util
+prune vcpkg_installed
+
+global-exclude *.a *.o *.obj *.lib *.pdb *.dll *.so *.dylib *.exe
