@@ -3,9 +3,14 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.32] - 2026-07-11
+### Changed
+- 代码仓库忽略_version.py
+
 ## [0.0.31] - 2026-07-11
 ### Changed
 - 调整python发布构建流程
+- release v0.0.31
 
 ## [0.0.30] - 2026-07-11
 ### Changed
@@ -184,7 +189,8 @@ All notable changes to this project will be documented in this file.
 - update changelog
 
 
-[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.31...HEAD
+[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.32...HEAD
+[0.0.32]: https://gitee.com/quant1x/base.git/compare/v0.0.31...v0.0.32
 [0.0.31]: https://gitee.com/quant1x/base.git/compare/v0.0.30...v0.0.31
 [0.0.30]: https://gitee.com/quant1x/base.git/compare/v0.0.29...v0.0.30
 [0.0.29]: https://gitee.com/quant1x/base.git/compare/v0.0.28...v0.0.29
