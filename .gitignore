@@ -16,6 +16,7 @@ __pycache__/
 .eggs/
 build/
 dist/
+_version.py
 *.egg-info/
 *.json
 
