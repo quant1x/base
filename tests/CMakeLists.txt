@@ -19,7 +19,7 @@ macro(add_app_executable source_file)
 
     # 链接依赖库（例如你提到的 utils）
     target_link_libraries(${target_name} PRIVATE
-        quant1x-std
+        quant1x-base
     )
 endmacro()
 
@@ -44,7 +44,7 @@ macro(add_catch2_executable source_file)
 
     # 链接依赖库（例如你提到的 utils）
     target_link_libraries(${target_name} PRIVATE
-        quant1x-std test-catch2 test-benchmark
+        quant1x-base test-catch2 test-benchmark
     )
 endmacro()
 
@@ -67,7 +67,7 @@ macro(add_gtest_executable source_file)
 
     # 链接依赖库（例如你提到的 utils）
     target_link_libraries(${target_name} PRIVATE
-        quant1x-std test-gtest
+        quant1x-base test-gtest
     )
 endmacro()
 
@@ -90,7 +90,7 @@ macro(add_benchmark_executable source_file)
 
     # 链接依赖库（例如你提到的 utils）
     target_link_libraries(${target_name} PRIVATE
-        quant1x-std test-benchmark
+        quant1x-base test-benchmark
     )
 endmacro()
 

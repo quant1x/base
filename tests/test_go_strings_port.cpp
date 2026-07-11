@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
-#include "../src/strings.h"
+#include "strings.h"
 
 void test_basic_char_functions() {
     std::cout << "=== 测试基础字符函数 ===" << std::endl;

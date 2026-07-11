@@ -10,7 +10,7 @@ include(cmake/base.cmake)
 include(cmake/git_tag_info.cmake)
 get_latest_git_tag_info(VERSION_FROM_GIT LATEST_TAG TAG_COMMIT_HASH GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL GIT_AUTHOR_DATE)
 
-project(quant1x-lib-std
+project(quant1x-base
     VERSION ${VERSION_FROM_GIT}
     LANGUAGES C CXX)
 
@@ -344,39 +344,19 @@ set(DEPENDENCY_CATCH2 "v${Catch2_VERSION}")
 # 量化基础设施
 # ============================================================
 
-set(std-headers
-    src/affinity.h
-    src/api.h
-    src/base.h
-    src/except.h
-    src/buffer.h
-    src/strings.h
-    src/format.h
-    src/feature_detection.h
-    src/numerics.h
-    src/safe.h
-    src/simd.h
-    src/cpu_info.h
-    src/time.h
-    src/timestamp.h
+set(base-headers
+    base/misc.h
+
 )
 
-set(std-sources
-    # 标准库兼容
-    src/strings.cpp
-    src/time.cpp
-    src/numerics.cpp
-    src/safe.cpp
-    src/simd.cpp
-    src/cpu_info.cpp
-    src/timestamp.cpp
-    src/affinity.cpp
+set(base-sources
+    base/misc.cpp
 )
 
 #if (WIN32)
-#    list(APPEND std-sources quant1x/runtime/daemon_service.cpp)
+#    list(APPEND base-sources quant1x/runtime/daemon_service.cpp)
 #elseif (APPLE)
-#    list(APPEND std-sources quant1x/runtime/daemon_macosx.cpp)
+#    list(APPEND base-sources quant1x/runtime/daemon_macosx.cpp)
 #elseif (UNIX)
 #    # LINUX 是非官方变量，我们手动检测
 #    set(LINUX FALSE)
@@ -385,7 +365,7 @@ set(std-sources
 #    endif ()
 #
 #    if (LINUX)
-#        list(APPEND std-sources quant1x/runtime/daemon_systemd.cpp)
+#        list(APPEND base-sources quant1x/runtime/daemon_systemd.cpp)
 #    else ()
 #        message(WARNING "Unsupported Unix OS: ${CMAKE_SYSTEM_NAME}")
 #    endif ()
@@ -407,13 +387,13 @@ message(STATUS "third_libs  Defines: ${_defines}")
 message(STATUS "third_libs  Options: ${_options}")
 
 # =============================
-# quant1x-std 基础依赖接口
+# quant1x-base 基础依赖接口
 # =============================
-add_library(quant1x-base INTERFACE)
-target_link_libraries(quant1x-base INTERFACE third_libs xtensor_optimize global_compile_options)
+add_library(quant1x-why INTERFACE)
+target_link_libraries(quant1x-why INTERFACE third_libs xtensor_optimize global_compile_options)
 
 # =============================
-# quant1x-std 下所有子模块
+# quant1x-base 下所有子模块
 # =============================
 
 # 添加 API 子项目
@@ -421,31 +401,32 @@ add_subdirectory(api)
 
 
 # =============================
-# quant1x-std 主配置
+# quant1x-base 主配置
 # =============================
 
 # 添加标准库
-add_library(quant1x-std STATIC
-    ${std-headers}
-    ${std-sources}
+add_library(quant1x-base STATIC
+    ${base-headers}
+    ${base-sources}
 )
-target_include_directories(quant1x-std
-    SYSTEM        # 关键选项：标记为系统头文件路径
-    PUBLIC        # 仅当前目标可见（或 PUBLIC/INTERFACE）
-    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
-    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/third_party/include>
-    $<INSTALL_INTERFACE:include>
+target_include_directories(quant1x-base
+   SYSTEM        # 关键选项：标记为系统头文件路径
+   PUBLIC        # 仅当前目标可见（或 PUBLIC/INTERFACE）
+   $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
+   $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/third_party/include>
+   $<INSTALL_INTERFACE:include>
 )
 
-target_link_libraries(quant1x-std PUBLIC
+target_link_libraries(quant1x-base PUBLIC
+    quant1x-why
     quant1x-api
 )
 
-# 添加别名目标，允许下游用户使用 quant1x::std
-add_library(quant1x::std ALIAS quant1x-std)
+# 添加别名目标，允许下游用户使用 quant1x::base
+add_library(quant1x::base ALIAS quant1x-base)
 
-get_target_property(_libs quant1x-std INTERFACE_LINK_LIBRARIES)
-message(STATUS "Library 'quant1x-std' requires: ${_libs}")
+get_target_property(_libs quant1x-base INTERFACE_LINK_LIBRARIES)
+message(STATUS "Library 'quant1x-base' requires: ${_libs}")
 
 MESSAGE(STATUS "RUNTIME = ${RUNTIME}")
 set(CMAKE_INSTALL_PREFIX ${RUNTIME})
@@ -453,7 +434,7 @@ set(CMAKE_INSTALL_PREFIX ${RUNTIME})
 STRING(TOUPPER "${CMAKE_BUILD_TYPE}" buildtype)
 message(STATUS "")
 message(STATUS "")
-message(STATUS "quant1x-std configuration summary:")
+message(STATUS "quant1x-base configuration summary:")
 message(STATUS "")
 message(STATUS "                              Build type : ${CMAKE_BUILD_TYPE}")
 message(STATUS "                        Operating System : ${CMAKE_HOST_SYSTEM_NAME}")
@@ -526,15 +507,6 @@ message(STATUS "                               benchmark : v${benchmark_VERSION}
 message(STATUS "                                  Catch2 : v${Catch2_VERSION}")
 message(STATUS "                                   GTest : v${GTest_VERSION}")
 
-#message(STATUS "quant1x-std found: ${quant1x-std_FOUND}")
-#message(STATUS "quant1x-std version: ${quant1x-std_VERSION}")
-#message(STATUS "quant1x-std include dirs: ${quant1x-std_INCLUDE_DIRS}")
-#message(STATUS "quant1x-std library dirs: ${quant1x-std_LIBRARY_DIRS}")
-#get_target_property(quant1x-std_opts quant1x-std COMPILE_OPTIONS)
-#get_target_property(quant1x-std_defs quant1x-std COMPILE_DEFINITIONS)
-#message(STATUS "继承的编译选项: ${quant1x-std_opts}")
-#message(STATUS "继承的宏定义: ${quant1x-std_defs}")
-
 # 检查编译器选项
 get_target_property(compile_includes global_compile_options INTERFACE_INCLUDE_DIRECTORIES)
 get_target_property(compile_libs     global_compile_options INTERFACE_LINK_LIBRARIES)
@@ -542,11 +514,11 @@ get_target_property(compile_defines  global_compile_options INTERFACE_COMPILE_DE
 get_target_property(compile_options  global_compile_options INTERFACE_COMPILE_OPTIONS)
 get_target_property(link_options     global_compile_options INTERFACE_LINK_OPTIONS)
 
-message(STATUS "quant1x-std (C)Includes: ${compile_includes}")
-message(STATUS "quant1x-std (C)    Libs: ${compile_libs}")
-message(STATUS "quant1x-std (C) Defines: ${compile_defines}")
-message(STATUS "quant1x-std (C) Options: ${compile_options}")
-message(STATUS "quant1x-std (L) Options: ${link_options}")
+message(STATUS "quant1x-base (C)Includes: ${compile_includes}")
+message(STATUS "quant1x-base (C)    Libs: ${compile_libs}")
+message(STATUS "quant1x-base (C) Defines: ${compile_defines}")
+message(STATUS "quant1x-base (C) Options: ${compile_options}")
+message(STATUS "quant1x-base (L) Options: ${link_options}")
 
 function(get_all_linked_targets target result_var)
     set(result "")
@@ -568,14 +540,14 @@ function(get_all_linked_targets target result_var)
 endfunction()
 
 # 使用函数
-get_all_linked_targets(quant1x-std ALL_LINKED_TARGETS)
+get_all_linked_targets(quant1x-base ALL_LINKED_TARGETS)
 message(STATUS "All linked targets (recursive): ${ALL_LINKED_TARGETS}")
 
 # 清除DLL文件的前缀
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 set(CMAKE_IMPORT_LIBRARY_PREFIX "")
 # 为静态库和动态库分别设置目标名称，避免冲突
-set_target_properties(quant1x-std PROPERTIES OUTPUT_NAME "quant1x-std" PREFIX "")
+set_target_properties(quant1x-base PROPERTIES OUTPUT_NAME "quant1x-base" PREFIX "")
 
 # Generate build-info.h from build-info.h.in
 configure_file(
@@ -599,12 +571,12 @@ if (WIN32)
 elseif(APPLE)
     set(lib_suffix "${lib_suffix}-darwin")
 endif ()
-set(quant1x-std_DEBUG_POSTFIX ${lib_suffix})
-message(STATUS ${quant1x-std_DEBUG_POSTFIX})
+set(quant1x-base_DEBUG_POSTFIX ${lib_suffix})
+message(STATUS ${quant1x-base_DEBUG_POSTFIX})
 
-mark_as_advanced(quant1x-std_DEBUG_POSTFIX)
-set_target_properties(quant1x-std PROPERTIES
-    DEBUG_POSTFIX "${quant1x-std_DEBUG_POSTFIX}"
+mark_as_advanced(quant1x-base_DEBUG_POSTFIX)
+set_target_properties(quant1x-base PROPERTIES
+    DEBUG_POSTFIX "${quant1x-base_DEBUG_POSTFIX}"
 )
 # 将第三方头文件声明为安装目标
 install(
@@ -619,11 +591,11 @@ install(
 # 安装配置（可选）
 install(TARGETS
     # 导出目标
-    quant1x-base quant1x-api quant1x-std
+    quant1x-why quant1x-api quant1x-base
     third_libs xtensor_optimize global_compile_options
 
     # 导出集
-    EXPORT quant1x-std
+    EXPORT quant1x-base
 
     # 安装路径
     ARCHIVE DESTINATION lib
@@ -632,10 +604,10 @@ install(TARGETS
     INCLUDES DESTINATION include
 )
 
-# 安装 src 目录中的头文件到 quant1x/std 目录
+# 安装 src 目录中的头文件到 quant1x 目录
 install(
     DIRECTORY src/
-    DESTINATION include/quant1x/std
+    DESTINATION include/quant1x
     FILES_MATCHING
     PATTERN "*.h"
     PATTERN "*.hpp"
@@ -644,35 +616,35 @@ install(
 
 install(
     DIRECTORY ${CMAKE_BINARY_DIR}/include/private/
-    DESTINATION include/quant1x/std
+    DESTINATION include/quant1x
 )
 
 include(CMakePackageConfigHelpers)
 
 # 生成版本文件
 write_basic_package_version_file(
-    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-std-config-version.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-base-config-version.cmake"
     VERSION ${PROJECT_VERSION}
     COMPATIBILITY AnyNewerVersion
 )
 
-install(EXPORT quant1x-std
-    FILE quant1x-std-targets.cmake
+install(EXPORT quant1x-base
+    FILE quant1x-base-targets.cmake
     NAMESPACE quant1x::
-    DESTINATION lib/cmake/quant1x-std
+    DESTINATION lib/cmake/quant1x-base
 )
 
 # 安装配置文件
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/quant1x-std-config.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-std-config.cmake"
-    INSTALL_DESTINATION lib/cmake/quant1x-std
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake/quant1x-base-config.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-base-config.cmake"
+    INSTALL_DESTINATION lib/cmake/quant1x-base
 )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-std-config.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-std-config-version.cmake"
-    DESTINATION lib/cmake/quant1x-std
+    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-base-config.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/quant1x-base-config-version.cmake"
+    DESTINATION lib/cmake/quant1x-base
 )
 
 # 单元测试

@@ -11,6 +11,22 @@
 // CPU亲和性和NUMA感知优化
 namespace api {
 
+    // =============================================================================
+    // 基础CPU亲和性API（保持向后兼容）
+    // =============================================================================
+    
+    // 绑定当前线程到最优CPU（智能选择）
+    bool bind_current_thread_to_optimal_cpu(std::error_code &ec);
+    
+    // 绑定当前线程到指定CPU
+    bool bind_current_thread_to_cpu(unsigned cpu_index, std::error_code &ec);
+    
+    // 绑定指定线程到CPU
+    bool bind_thread_to_cpu(std::thread &thread, unsigned cpu_index, std::error_code &ec);
+    
+    // 绑定指定线程到最优CPU
+    bool bind_thread_to_optimal_cpu(std::thread &thread, std::error_code &ec);
+
     // NUMA拓扑信息结构体
     struct NumaTopology {
         unsigned node_count;                           // NUMA节点数量
@@ -37,22 +53,6 @@ namespace api {
         MARKET_DATA,      // 市场数据线程  
         CRITICAL_PATH     // 关键路径线程
     };
-
-    // =============================================================================
-    // 基础CPU亲和性API（保持向后兼容）
-    // =============================================================================
-    
-    // 绑定当前线程到最优CPU（智能选择）
-    bool bind_current_thread_to_optimal_cpu(std::error_code &ec);
-    
-    // 绑定当前线程到指定CPU
-    bool bind_current_thread_to_cpu(unsigned cpu_index, std::error_code &ec);
-    
-    // 绑定指定线程到CPU
-    bool bind_thread_to_cpu(std::thread &thread, unsigned cpu_index, std::error_code &ec);
-    
-    // 绑定指定线程到最优CPU
-    bool bind_thread_to_optimal_cpu(std::thread &thread, std::error_code &ec);
 
     // =============================================================================
     // NUMA感知增强API

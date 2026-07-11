@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/affinity.h"
+#include "affinity.h"
 #include <thread>
 #include <vector>
 #include <chrono>

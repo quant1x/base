@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../src/timestamp.h"
+#include "timestamp.h"
 
 using namespace quant1x;
 

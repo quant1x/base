@@ -1,5 +1,5 @@
 // NUMA亲和性功能验证程序
-#include "../src/affinity.h"
+#include "affinity.h"
 #include <iostream>
 #include <thread>
 #include <vector>

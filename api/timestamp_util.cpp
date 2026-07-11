@@ -1,4 +1,7 @@
-#include "time.h"
+#include "timestamp_util.h"
+#include "except.h"
+#include "safe.h"
+#include "strings.h"
 
 #include <chrono>
 #if __cpp_lib_chrono < 201907L
@@ -17,11 +20,8 @@ static_assert(__cpp_lib_chrono >= 201907L, "C++20 <chrono> features not supporte
 #endif
 
 #include <ctime>
-#include <stdexcept>
 #include <iostream>
-#include "except.h"
-#include "strings.h"
-#include "safe.h"
+#include <stdexcept>
 
 #if CXX_CHRONO_ZONE_USE_DATE
 namespace fmt {

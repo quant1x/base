@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../src/strings.h"
+#include "strings.h"
 
 int main() {
     std::string test = "XMLHttpRequest";

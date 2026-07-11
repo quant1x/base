@@ -9,7 +9,7 @@ if(NOT WIN32 AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_link_libraries(third_libs INTERFACE date::date date::date-tz)
 endif()
 
-target_compile_definitions(third_libs INTERFACE FMT_HEADER_ONLY)
+#target_compile_definitions(third_libs INTERFACE FMT_HEADER_ONLY)
 
 # spdlog
 #find_package(spdlog CONFIG REQUIRED)
@@ -53,4 +53,4 @@ else()
     set(spdlog_VERSION "0.0.0")
 endif()
 echo_lib_version(spdlog ${spdlog_VERSION})
-target_compile_definitions(third_libs INTERFACE SPDLOG_HEADER_ONLY)
+#target_compile_definitions(third_libs INTERFACE SPDLOG_HEADER_ONLY)

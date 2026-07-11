@@ -1,0 +1,24 @@
+@PACKAGE_INIT@
+
+set_and_check(QUANT1X_INCLUDE_DIR "@CMAKE_INSTALL_PREFIX@/include")
+set_and_check(THIRD_PARTY_INCLUDE_DIR "@CMAKE_INSTALL_PREFIX@/include/third_party")
+
+include(CMakeFindDependencyMacro)
+find_dependency(Threads)
+find_dependency(OpenSSL REQUIRED)
+find_dependency(Iconv REQUIRED)
+find_dependency(yaml-cpp CONFIG REQUIRED)
+find_dependency(CapnProto CONFIG REQUIRED)
+find_dependency(mimalloc CONFIG REQUIRED)
+find_dependency(cpr CONFIG REQUIRED)
+find_dependency(ZLIB REQUIRED)
+find_dependency(unofficial-duktape CONFIG REQUIRED)
+# 注意：测试库依赖 (benchmark, Catch2, GTest) 不包含在运行时依赖中
+
+include("${CMAKE_CURRENT_LIST_DIR}/quant1x-std-targets.cmake")
+
+# 导出给外部项目使用
+set(quant1x_INCLUDE_DIRS
+    ${QUANT1X_INCLUDE_DIR}
+    ${THIRD_PARTY_INCLUDE_DIR}
+)
