@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.0.30] - 2026-07-11
+### Changed
+- 修订许可证为MIT
+- 规划python库配置
+
 ## [0.0.29] - 2026-07-11
 ### Changed
 - 清理protobuf的cmake缓存
@@ -11,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - 修订项目名称
 - 暂存现有代码
 - 保存代码
+- release v0.0.29
 
 ## [0.0.28] - 2025-09-20
 ### Changed
@@ -173,7 +179,8 @@ All notable changes to this project will be documented in this file.
 - update changelog
 
 
-[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.29...HEAD
+[Unreleased]: https://gitee.com/quant1x/base.git/compare/v0.0.30...HEAD
+[0.0.30]: https://gitee.com/quant1x/base.git/compare/v0.0.29...v0.0.30
 [0.0.29]: https://gitee.com/quant1x/base.git/compare/v0.0.28...v0.0.29
 [0.0.28]: https://gitee.com/quant1x/base.git/compare/v0.0.27...v0.0.28
 [0.0.27]: https://gitee.com/quant1x/base.git/compare/v0.0.26...v0.0.27
