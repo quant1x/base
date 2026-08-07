@@ -3,7 +3,7 @@ package api
 import (
 	"os"
 
-	"github.com/quant1x/pkg/gocsv"
+	"github.com/gocarina/gocsv"
 )
 
 const (

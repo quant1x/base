@@ -2,7 +2,7 @@ package mdc
 
 import (
 	"github.com/quant1x/base/logger/gls"
-	"github.com/quant1x/pkg/uuid"
+	uuid "github.com/satori/go.uuid"
 )
 
 const (

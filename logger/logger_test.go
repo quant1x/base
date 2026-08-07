@@ -6,10 +6,9 @@ import (
 	"testing"
 	"time"
 
-	ggithugithub.com/quant1xx/base/logger/gls"
-	"github.com/quant1x/base/logger/mdc"
-	"github.com/quant1x/pkg/uuid"
 	"github.com/quant1x/base/api"
+	"github.com/quant1x/base/logger/mdc"
+	uuid "github.com/satori/go.uuid"
 )
 
 func TestGoId(t *testing.T) {
