@@ -18,8 +18,8 @@ package hashbidimap
 import (
 	"fmt"
 
-	"gitee.com/quant1x/base/util/hashmap"
-	"gitee.com/quant1x/base/util/internal"
+	"github.com/quant1x/base/util/hashmap"
+	"github.com/quant1x/base/util/internal"
 )
 
 func assertMapImplementation() {

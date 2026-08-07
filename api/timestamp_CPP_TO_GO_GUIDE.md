@@ -133,7 +133,7 @@ package main
 
 import (
     "fmt"
-    "gitee.com/quant1x/std/timestamp"
+    "github.com/quant1x/std/timestamp"
 )
 
 func main() {

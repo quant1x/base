@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![C++](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://isocpp.org/)
-[![Go](https://img.shields.io/badge/Go-1.25-blue.svg)](https://golang.org/)
-[![Rust](https://img.shields.io/badge/Rust-1.70+-orange.svg)](https://www.rust-lang.org/)
+[![Go](https://img.shields.io/badge/Go-1.27-blue.svg)](https://golang.org/)
+[![Rust](https://img.shields.io/badge/Rust-1.97.1+-orange.svg)](https://www.rust-lang.org/)
 [![CMake](https://img.shields.io/badge/CMake-3.30+-green.svg)](https://cmake.org/)
 
 ## 📖 项目简介
@@ -56,7 +56,7 @@
 
 ### 1. 克隆项目
 ```bash
-git clone https://gitee.com/quant1x/base.git
+git clone https://github.com/quant1x/base.git
 cd base
 ```
 
@@ -222,7 +222,7 @@ go test -bench=. -benchmem ./...
 - **gtest**: 单元测试框架
 
 ### Go 依赖
-- **gitee.com/quant1x/pkg**: 量化交易核心包
+- **github.com/quant1x/pkg**: 量化交易核心包
 - **github.com/stretchr/testify**: 测试工具
 
 ## 🤝 贡献指南
@@ -253,8 +253,8 @@ go test -bench=. -benchmem ./...
 
 ## 🔗 相关链接
 
-- **项目主页**: [Gitee - quant1x/base](https://gitee.com/quant1x/base)
-- **问题反馈**: [Issues](https://gitee.com/quant1x/base/issues)
+- **项目主页**: [Gitee - quant1x/base](https://github.com/quant1x/base)
+- **问题反馈**: [Issues](https://github.com/quant1x/base/issues)
 - **技术文档**: [docs/](docs/)
 - **NUMA 亲和性**: [docs/numa_affinity.md](docs/numa_affinity.md)
 

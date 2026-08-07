@@ -7,7 +7,7 @@ package treeset
 import (
 	"encoding/json"
 
-	"gitee.com/quant1x/base/util/internal"
+	"github.com/quant1x/base/util/internal"
 )
 
 func assertSerializationImplementation() {

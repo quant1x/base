@@ -4,7 +4,7 @@
 
 package main
 
-import "gitee.com/quant1x/base/util/linkedhashset"
+import "github.com/quant1x/base/util/linkedhashset"
 
 // LinkedHashSetExample to demonstrate basic usage of LinkedHashSet
 func main() {

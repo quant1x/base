@@ -5,8 +5,8 @@
 package main
 
 import (
-	"gitee.com/quant1x/base/util/internal"
-	sll "gitee.com/quant1x/base/util/singlylinkedlist"
+	sgithgithub.com/quant1xx1x/base/util/singlylinkedlist"
+	"github.com/quant1x/base/util/internal"
 )
 
 // SinglyLinkedListExample to demonstrate basic usage of SinglyLinkedList

@@ -1,10 +1,10 @@
-module gitee.com/quant1x/base
+module github.com/quant1x/base
 
-go 1.25.0
+go 1.26.0
 
 require (
-	gitee.com/quant1x/pkg v0.8.2
-	github.com/petermattis/goid v0.0.0-20250904145737-900bdf8bb490
+	github.com/petermattis/goid v0.0.0-20260725062400-500c67a39b75
+	github.com/quant1x/pkg v0.10.0
 	github.com/stretchr/testify v1.11.1
 )
 

@@ -23,13 +23,13 @@
 由于Go语言的包管理机制，创建了独立的子包：
 - 原包名：`timestamp`
 - 新包名：`timestampcpp`
-- 包路径：`gitee.com/quant1x/std/src/timestampcpp`
+- 包路径：`github.com/quant1x/std/src/timestampcpp`
 
 ### 代码修改
 1. **包声明**：更新为 `package timestampcpp`
-2. **导入路径**：添加对 `gitee.com/quant1x/std/timestamp` 的依赖
+2. **导入路径**：添加对 `github.com/quant1x/std/timestamp` 的依赖
 3. **函数引用**：所有原timestamp包的函数调用都添加了 `timestamp.` 前缀
-4. **演示程序**：更新导入路径为 `gitee.com/quant1x/std/src/timestampcpp`
+4. **演示程序**：更新导入路径为 `github.com/quant1x/std/src/timestampcpp`
 
 ### 修复的技术问题
 1. **常量引用**：使用 `timestamp.MillisecondsPerDay` 等带包前缀的常量
@@ -72,14 +72,14 @@ go run timestamp_demo.go
 
 ### 旧的使用方式
 ```go
-import "gitee.com/quant1x/std/timestamp"
+import "github.com/quant1x/std/timestamp"
 
 ts := timestamp.NewTimestamp(1234567890)
 ```
 
 ### 新的使用方式
 ```go
-import "gitee.com/quant1x/std/src/timestampcpp"
+import "github.com/quant1x/std/src/timestampcpp"
 
 ts := timestampcpp.NewTimestamp(1234567890)
 ```

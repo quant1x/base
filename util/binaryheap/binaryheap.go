@@ -15,8 +15,8 @@ import (
 	"fmt"
 	"strings"
 
-	"gitee.com/quant1x/base/util/arraylist"
-	"gitee.com/quant1x/base/util/internal"
+	"github.com/quant1x/base/util/arraylist"
+	"github.com/quant1x/base/util/internal"
 )
 
 func assertTreeImplementation() {

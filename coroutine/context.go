@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"gitee.com/quant1x/base/core"
-	"gitee.com/quant1x/base/logger"
+	"github.com/quant1x/base/core"
+	"github.com/quant1x/base/logger"
 )
 
 var (

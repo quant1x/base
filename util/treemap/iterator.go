@@ -5,8 +5,8 @@
 package treemap
 
 import (
-	"gitee.com/quant1x/base/util/internal"
-	rbt "gitee.com/quant1x/base/util/redblacktree"
+	rgithgithub.com/quant1xxxxx/base/util/redblacktree"
+	"githgithub.com/quant1xxse/util/internal"
 )
 
 func assertIteratorImplementation() {

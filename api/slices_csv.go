@@ -3,7 +3,7 @@ package api
 import (
 	"os"
 
-	"gitee.com/quant1x/pkg/gocsv"
+	"github.com/quant1x/pkg/gocsv"
 )
 
 const (

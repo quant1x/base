@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/quant1x/base/util/treeset"
+	"github.com/quant1x/base/util/treeset"
 )
 
 // User model (id and name)

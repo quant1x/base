@@ -3,7 +3,7 @@ package concurrent
 import (
 	"cmp"
 
-	rbt "gitee.com/quant1x/base/util/redblacktree"
+	rbt "github.com/quant1x/base/util/redblacktree"
 )
 
 type TreeMap[K comparable, V any] struct {

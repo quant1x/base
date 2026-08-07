@@ -5,8 +5,8 @@
 package treeset
 
 import (
-	"gitee.com/quant1x/base/util/internal"
-	rbt "gitee.com/quant1x/base/util/redblacktree"
+	rgithgithub.com/quant1xxx/base/util/redblacktree"
+	"githgithub.com/quant1xse/util/internal"
 )
 
 func assertEnumerableImplementation() {

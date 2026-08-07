@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"gitee.com/quant1x/base/api"
-	gls2 "gitee.com/quant1x/base/logger/gls"
-	"gitee.com/quant1x/base/logger/mdc"
-	"gitee.com/quant1x/pkg/uuid"
+	ggithugithub.com/quant1xx/base/logger/gls"
+	"github.com/quant1x/base/logger/mdc"
+	"github.com/quant1x/pkg/uuid"
+	"github.com/quant1x/base/api"
 )
 
 func TestGoId(t *testing.T) {

@@ -7,7 +7,7 @@ package main
 import (
 	"fmt"
 
-	"gitee.com/quant1x/base/util/treemap"
+	"github.com/quant1x/base/util/treemap"
 )
 
 // IteratorWithKeyExample to demonstrate basic usage of IteratorWithKey

@@ -5,7 +5,7 @@
 package linkedhashmap
 
 import (
-	"gitee.com/quant1x/base/util/internal"
+	"github.com/quant1x/base/util/internal"
 )
 
 func assertEnumerableImplementation() {

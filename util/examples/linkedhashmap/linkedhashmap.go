@@ -4,7 +4,7 @@
 
 package main
 
-import "gitee.com/quant1x/base/util/linkedhashmap"
+import "github.com/quant1x/base/util/linkedhashmap"
 
 // LinkedHashMapExample to demonstrate basic usage of LinkedHashMapExample
 func main() {

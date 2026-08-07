@@ -15,7 +15,7 @@ import (
 	"fmt"
 	"sync"
 
-	"gitee.com/quant1x/base/util/internal"
+	"github.com/quant1x/base/util/internal"
 )
 
 func assertTreeImplementation() {

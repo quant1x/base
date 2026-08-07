@@ -5,9 +5,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"gitee.com/quant1x/base/api"
-	"gitee.com/quant1x/base/logger"
-	"gitee.com/quant1x/base/runtime"
+	"github.com/quant1x/base/api"
+	"github.com/quant1x/base/logger"
+	"github.com/quant1x/base/runtime"
 )
 
 const (

@@ -82,7 +82,7 @@
 
 ### 基本使用
 ```go
-import "gitee.com/quant1x/std/timestamp"
+import "github.com/quant1x/std/timestamp"
 
 // 创建时间戳
 ts := timestamp.NewTimestampFromDate(2022, 1, 1, 15, 30, 45, 123)
