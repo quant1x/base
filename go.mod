@@ -1,10 +1,10 @@
 module github.com/quant1x/base
 
-go 1.27.0
+go 1.27.2
 
 require (
-	github.com/gocarina/gocsv v0.0.0-20260628180327-50907998929c
-	github.com/petermattis/goid v0.0.0-20260725062400-500c67a39b75
+	github.com/gocarina/gocsv v0.0.0-20261012193826-401c25af6907
+	github.com/petermattis/goid v0.0.0-20260918085751-abfca077860b
 	github.com/satori/go.uuid v1.2.0
 	github.com/stretchr/testify v1.11.1
 )
